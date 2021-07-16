@@ -13,7 +13,8 @@ class Sockets {
         this.io.on('connection', ( socket ) => { 
 
             //Event listener: message-to-server
-            socket.on('message-to-server', ( data ) => {        
+            socket.on('message-to-server', ( data ) => {      
+                console.log(data)  
                 socket.emit('message-from-server', data);
             })
         
